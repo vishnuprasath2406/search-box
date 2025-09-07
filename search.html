@@ -3,42 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Search Box</title>
+  <title>Search & Contact</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
       background: #f8f9fa;
       margin: 0;
     }
-    .search-container {
+    .container {
       text-align: center;
+      width: 100%;
+      max-width: 500px;
     }
     h1 {
       font-size: 32px;
       color: #333;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
-    input[type="text"] {
-      width: 400px;
+    form {
+      margin: 24px 0;
+      padding: 20px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 0 10px 2px #eee;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    input[type="text"], input[type="email"] {
+      width: 90%;
+      max-width: 400px;
       padding: 12px;
+      margin-bottom: 12px;
       border: 1px solid #ccc;
       border-radius: 25px;
       font-size: 16px;
       outline: none;
     }
     button {
-      margin-left: 10px;
-      padding: 12px 20px;
+      padding: 12px 28px;
       border: none;
       border-radius: 25px;
       background-color: #4285f4;
       color: white;
       font-size: 16px;
       cursor: pointer;
+      margin-top: 8px;
     }
     button:hover {
       background-color: #3367d6;
@@ -46,16 +61,22 @@
   </style>
 </head>
 <body>
-  <div class="search-container">
+  <div class="container">
+    <!-- Search Form -->
     <h1>My Search</h1>
-    <form action="https://formsubmit.co/mailtovishnusuresh2406@gmail.com" method="POST">
+    <form action="https://formsubmit.co/mailtovishnu2406@gmail.com" method="POST">
       <input type="text" name="search_query" placeholder="Type your search..." required>
-      
       <!-- Hidden fields -->
       <input type="hidden" name="_next" value="https://yourwebsite.github.io/thankyou.html">
       <input type="hidden" name="_captcha" value="false">
-      
       <button type="submit">Search</button>
+    </form>
+    <!-- Contact Form -->
+    <h1>Contact Us</h1>
+    <form action="https://formsubmit.co/mailtovishnu2406@email.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <button type="submit">Send</button>
     </form>
   </div>
 </body>
