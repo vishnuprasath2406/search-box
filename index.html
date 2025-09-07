@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Search Box Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #fafafa;
+      margin: 0;
+    }
+    form {
+      display: flex;
+      align-items: center;
+      background: white;
+      padding: 10px 20px;
+      border-radius: 24px;
+      box-shadow: 0 2px 5px rgb(0 0 0 / 0.15);
+      width: 500px;
+      max-width: 95%;
+    }
+    input[type="text"] {
+      flex-grow: 1;
+      border: none;
+      outline: none;
+      font-size: 18px;
+      padding: 10px;
+      border-radius: 24px;
+    }
+    button {
+      background-color: #4285f4;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 24px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      margin-left: 10px;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #357ae8;
+    }
+  </style>
+</head>
+<body>
+  <form action="https://formsubmit.co/mailtovishnu2406@email.com" method="POST">
+    <input type="text" name="search_query" placeholder="Search..." required />
+    <!-- Optional hidden fields for redirect and disabling captcha -->
+    <input type="hidden" name="_next" value="https://yourwebsite.github.io/thankyou.html" />
+    <input type="hidden" name="_captcha" value="false" />
+    <button type="submit">Search</button>
+  </form>
+</body>
+</html>
